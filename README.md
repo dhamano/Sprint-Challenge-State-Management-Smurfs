@@ -22,41 +22,46 @@ In this challenge, you are to build the Smurfs village once again, only this tim
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] What problem does the context API help solve?
-- [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
-- [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
-- [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
-- [ ] What is your favorite state management system you've learned and this sprint? Please explain why!
+- [x] What problem does the context API help solve?
+      It save developers from having to do excessive prop drilling making it easier to code and to understand the code.
+- [x] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+      Store is the single source of truth in a redux app. Actions are the async functions that are executed by middleware to run functions that are needed for an app to work.
+- [X] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+      Application state is the state of the whole application and generally contains state for application-wide stuff. Component state is for handling local variables and state for thing that are pertinent to that component only.
+- [x] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+      'Redux-thunk' allows us to execute logic before data gets passed to the reducer. 'action-creators' allow us to execute async functions such as api calls and use that data when we get it from the api. this allows our app to keep functioniong instead of waiting on that call.
+- [x] What is your favorite state management system you've learned and this sprint? Please explain why!
+      It depends on what I am trying to do and what the app requires. but Hooks have been really nice because it cuts down on a lot of setup time and allows us to make code that is a bit easier to read at a glance without looking through different pieces of code.
 
 ## Project Set Up
 
 Follow these steps to set up your project:
 
-- [ ] `fork & clone` this repository.
-- [ ] `cd` into the forked copy of this repository.
-- [ ] **RUN** `yarn` to retrieve all `server-side` the dependencies.
-- [ ] **RUN** `yarn start` or `npm start` to get your API up and running on `http://localhost:3333`. This is the **URL** you're going to need to use within your React app in order to make AJAX requests for data.
-- [ ] After your API is up and running, you can open chrome and type in `http://localhost:3333/smurfs`. You should see an empty Array `[]` returned to you. This is an array that your **API** will be using to store our Smurf Data.
-- [ ] **LOOK** at your `smurfs` directory and notice it's just a plain ol' React App that we've built using `create-react-app`.
-- [ ] **Open** `src/index.js` to make sure that your app is ready to roll with the proper middleware.
-- [ ] **cd** into `smurfs` and run `yarn` to retrieve the client side dependencies.
-- [ ] **RUN** `yarn start` to fire up your React application. There ought to be a pretty little message awaiting you welcoming you to the app. `Follow` the prompting.
+- [x] `fork & clone` this repository.
+- [x] `cd` into the forked copy of this repository.
+- [x] **RUN** `yarn` to retrieve all `server-side` the dependencies.
+- [x] **RUN** `yarn start` or `npm start` to get your API up and running on `http://localhost:3333`. This is the **URL** you're going to need to use within your React app in order to make AJAX requests for data.
+- [x] After your API is up and running, you can open chrome and type in `http://localhost:3333/smurfs`. You should see an empty Array `[]` returned to you. This is an array that your **API** will be using to store our Smurf Data.
+- [x] **LOOK** at your `smurfs` directory and notice it's just a plain ol' React App that we've built using `create-react-app`.
+- [x] **Open** `src/index.js` to make sure that your app is ready to roll with the proper middleware.
+- [x] **cd** into `smurfs` and run `yarn` to retrieve the client side dependencies.
+- [x] **RUN** `yarn start` to fire up your React application. There ought to be a pretty little message awaiting you welcoming you to the app. `Follow` the prompting.
 
 **LOOK** at all the files you've been given for this project. One important file to note is `server.js`. This file contains an **API** that you are going to be interfacing with. Below is documentation on how to interact with the **API**.
 
 ## Minimum Viable Product
 
-- [ ] Plan and implement how you are going to manage your state for your application
-- [ ] You _must_ use either context or Redux as your state management system
-- [ ] Once you have planned out your state management system, fetch data from the smurf server
-- [ ] Add a form to collect info for a new smurf, and make a POST request to the server to add a new smurf to your village
+- [x] Plan and implement how you are going to manage your state for your application
+- [x] You _must_ use either context or Redux as your state management system
+- [x] Once you have planned out your state management system, fetch data from the smurf server
+- [x] Add a form to collect info for a new smurf, and make a POST request to the server to add a new smurf to your village
 
 ## API documentation
 
 ### GET '/smurfs'
 
-- [ ] Retrieve an array all the Smurfs in the Smurf DB by writing a `GET` to the endpoint `/smurfs`.
-- [ ] Double check that your response from the server is an array of smurfs.
+- [x] Retrieve an array all the Smurfs in the Smurf DB by writing a `GET` to the endpoint `/smurfs`.
+- [x] Double check that your response from the server is an array of smurfs.
 
 ```js
 [
@@ -71,7 +76,7 @@ Follow these steps to set up your project:
 
 ### POST '/smurfs'
 
-- [ ] Design the functionality to add a smurf to the Smurf DB you'll need all three fields. `name`, `age`, and `height`.
+- [x] Design the functionality to add a smurf to the Smurf DB you'll need all three fields. `name`, `age`, and `height`.
 
 Example of the shape of data to be sent to the `POST` endpoint:
 
